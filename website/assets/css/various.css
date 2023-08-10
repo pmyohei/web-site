@@ -323,7 +323,7 @@
 }
 
 .service_item_sub_title {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Sawarabi Gothic";
 }
 
@@ -652,6 +652,11 @@
 }
 
 @media screen and (max-width: 768px){
+
+  .page-header .page-header-image.jobtop_header {
+    background-position: left 40% bottom 50%;
+  }
+
   .img_job_top {
     margin-top: 32px;
     padding: 20px;
@@ -659,6 +664,11 @@
 }
 
 @media screen and (max-width: 400px){
+
+  .page-header .page-header-image.jobtop_header {
+    background-position: right 70% bottom 50%;
+  }
+
   .benefit_item {
     height: 380px;
   }

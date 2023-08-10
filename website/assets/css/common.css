@@ -524,8 +524,9 @@ footer.footer_item a{
 
 .link-img-wrapper h5 {
   font-family: "Sawarabi Gothic";
+  font-size: 16px;
+  letter-spacing: .04em;
 }
-
 
 @media screen and (max-width: 992px){
 
