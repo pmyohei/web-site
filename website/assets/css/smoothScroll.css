@@ -1,0 +1,96 @@
+
+.page-header .page-header-image {
+	--overflow: 120px;
+	height: calc(100% + (2 * var(--overflow)));
+	top: calc( -1 * var(--overflow));
+	width: 100%;
+	position: absolute;
+	background-image: var(--image);
+    background-size: cover;
+	background-position: center center;
+	will-change: transform;
+}
+
+.tmp--inv {
+	display: none;
+}
+
+
+/* =================================
+    ヘッダ画像URL
+   ================================= */
+/* Home */
+.header__img--home_1 {
+	--image: url('../img/home_header_1.jpg');
+}
+.header__img--home_2 {
+	--image: url('../img/home_header_2.png');
+}
+.header__img--home_3 {
+	--image: url('../img/home_header_3.jpg');
+}
+
+/* company */
+.header__img--company {
+	--image: url('../img/home_item_about_us.jpg');
+}
+
+/* histroy */
+.header__img--histroy {
+	--image: url('../img/home_item_about_us.jpg');
+}
+
+/* philosophy */
+.header__img--philosophy {
+	--image: url('../img/philosophy_header.jpg');
+}
+
+/* president */
+.header__img--president {
+	--image: url('../img/message_ceo_header_1.jpg');
+}
+
+/* marginrate */
+.header__img--marginrate {
+	--image: url('../img/margin_rate_header.jpg');
+}
+
+/* service */
+.header__img--service {
+	--image: url('../img/service_header.jpg');
+}
+
+/* contact */
+.header__img--contact {
+	--image: url('../img/contact_header.jpg');
+}
+
+/* job top */
+.header__img--jobtop {
+	--image: url('../img/job_header.jpg');
+}
+
+/* recruit */
+/* .header__img--recruit {
+	--image: url('../img/margin_rate_header.jpg');
+} */
+
+/* carrer */
+.header__img--carrer {
+	--image: url('../img/job_link_carrer.jpg');
+}
+
+/* club */
+.header__img--club {
+	--image: url('../img/club_header.jpg');
+}
+
+/* activities */
+.header__img--activities {
+	--image: url('../img/activities_header.jpg');
+}
+
+/* 20th */
+.header__img--anniversary {
+	--image: url('../img/anniversary_header.jpg');
+}

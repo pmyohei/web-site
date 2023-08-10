@@ -1,0 +1,407 @@
+
+:root {
+    /* 縦線 */
+    --cd-timeline:#537188;
+    /* 年代 */
+    --cd-timeline-tx:#537188;
+    --cd-timeline-min-tx:#537188;
+    /* 年代点 */
+    --cd-timeline-point:#B3C27E;
+    --cd-timeline-point:#537188;
+    /* 吹き出し-背景 */
+    --cd-speech-bubble:#FFFFFFcc;
+    --cd-speech-bubble-shadow:#e0ddd3;
+    /* 吹き出し-文字 */
+    --cd-speech-tx:#537188;
+}
+
+.cd-timeline {
+    overflow:hidden;
+    padding: 4em 4em;
+    /* ;padding:var(--space-lg) 0 */
+    color:hsl(207, 10%, 55%);
+    /* ;color:var(--cd-color-3) */
+    background-color: #F2F0E9; 
+    /* ;background-color:hsl(var(--cd-color-2-h), var(--cd-color-2-s), calc(var(--cd-color-2-l)*1.05)) */
+    /* ;font-family:'Droid Serif', serif */
+    /* ;font-family:var(--font-primary) */
+}
+
+.cd-timeline__title_border {
+    border-bottom: solid 2px var(--cd-speech-bubble);
+}
+.cd-timeline__header {
+    padding: 0 0 4em 0;
+}
+.cd-timeline__header.next {
+    padding-top: 8em;
+    padding-bottom: 4em;
+}
+.cd-timeline__header h2 {
+    color: var(--cd-timeline);
+    letter-spacing: .1em; 
+}
+
+.cd-timeline__container {
+    position:relative;
+    padding:1.25em 0;
+}
+
+.cd-timeline__container::before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:18px;
+    height:100%;
+    width:2px;
+    background:var(--cd-timeline);
+}
+
+@media (max-width: 1024px) {
+    .cd-timeline {
+        padding: 2em 2em;
+    }
+
+    .cd-timeline__container::before {
+        left: 9px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .cd-timeline__container::before {
+        left:50%;
+        -webkit-transform:translateX(-50%);
+        -ms-transform:translateX(-50%);
+        transform:translateX(-50%)
+    }
+}
+
+.cd-timeline__block {
+    display:flex;
+    position:relative;
+    z-index:1;
+    margin-bottom: 4em;
+}
+
+.cd-timeline__block:last-child {
+    margin-bottom:0
+}
+
+@media (min-width: 64rem) {
+    .cd-timeline__block:nth-child(even) {
+        -ms-flex-direction:row-reverse;
+        flex-direction:row-reverse
+    }
+
+}
+
+
+.cd-timeline__circle {
+    display:flex;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -ms-flex-negative:0;
+    flex-shrink:0;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    /* box-shadow : 0 0 0 1px hsl(0, 0%, 100%), 
+                 inset 0 1px 0 rgba(0, 0, 0, 0.08),
+                 0 2px 0 3px rgba(0, 0, 0, 0.05); */
+}
+
+@media (min-width: 64rem) {
+    .cd-timeline__circle {
+        width: 30px;
+        height: 30px;
+        -ms-flex-order:1;
+        order:1;
+        margin-left:calc(5% - 15px);
+        will-change:transform
+    }
+    .cd-timeline__block:nth-child(even) .cd-timeline__circle {
+        margin-right:calc(5% - 15px)
+    }
+}
+
+.cd-timeline__circle--club {
+    background-color:var( --cd-timeline-point );
+}
+
+/* 吹き出し */
+.cd-timeline__content {
+    -ms-flex-positive:1;
+    flex-grow:1;
+    position:relative;
+    background:var(--cd-speech-bubble);
+    border-radius:0.25em;
+    padding: 0em 2.8em 1.25em 2.8em;
+    box-shadow:0 3px 0 var(--cd-speech-bubble-shadow);
+    color:hsl(206, 21%, 24%);
+    font-family: "Sawarabi Gothic";
+}
+
+.cd-timeline__item_title {
+    padding-top: 2.8em;
+}
+
+
+.cd-timeline__item_title h2,
+.cd-timeline__item_title p {
+    color: var( --cd-speech-tx );
+    font-family: "Sawarabi Gothic";
+    line-height: 1.3em;
+    letter-spacing: .1em;
+}
+.cd-timeline__item_title h2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+.cd-timeline__item_title p {
+    font-size: 14px;
+    line-height: 1.7em;
+}
+
+.cd-timeline__block:nth-child(odd) .cd-timeline__item_title {
+    text-align: end;
+}
+.cd-timeline__block .cd-timeline__item_title .detail {
+    text-align: start;
+}
+
+/* 吹き出し三角 */
+.cd-timeline__content::before {
+    content:'';
+    position:absolute;
+    top:16px;
+    right:100%;
+    width:0;
+    height:0;
+    border:7px solid transparent;
+    border-right-color:var(--cd-speech-bubble);
+    /* border-right-color:var(--color-white) */
+}
+
+.cd-timeline__content .picture {
+    /* width: 70%; */
+    /* padding: 0px 0px 0px 0px; */
+    padding: 28px 40px 40px 40px;
+    /* height: 80%; */
+}
+
+
+@media (min-width: 64rem) {
+
+    .cd-timeline__content {
+        width: 45%;
+        -ms-flex-positive:0;
+        flex-grow:0;
+        will-change:transform;
+        margin:0;
+        font-size:0.8em;
+        --line-height-multiplier: 1.2
+    }
+
+    .cd-timeline__content::before {
+        top:24px
+    }
+
+    .cd-timeline__block:nth-child(odd) .cd-timeline__content::before {
+        right:auto;
+        left:100%;
+        width:0;
+        height:0;
+        border:7px solid transparent;
+        border-left-color:var(--cd-speech-bubble);
+    }
+}
+
+@media (max-width: 1024px) {
+    .cd-timeline__content {
+        left: 10px;
+        padding: 0em 1em 1.25em 1em;
+    }
+
+    .cd-timeline__item_title {
+        padding-top: 1.0em;
+    }
+    .cd-timeline__item_title h2 {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    .cd-timeline__item_title p {
+        font-size: 12px;
+    }
+
+    /* 吹き出しタイトルと文章を左 */
+    .cd-timeline__block:nth-child(odd) .cd-timeline__item_title {
+        text-align: start;
+    }
+}
+
+
+
+
+.cd-timeline__date_wrapper {
+    justify-content: space-between;
+}
+
+.cd-timeline__date {
+    font-size: 16px;
+    color:var(--cd-timeline-tx);
+    margin-top: -1em;
+}
+
+@media (max-width: 1024px) {
+    .cd-timeline__date_wrapper {
+        margin-top: 12px;
+    }
+    .cd-timeline__date {
+        color:var(--cd-timeline-min-tx);
+    }
+    .cd-timeline__date {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .cd-timeline__date {
+        position:absolute;
+        width:100%;
+        left:120%;
+        top:20px
+    }
+
+    /* 偶数のみ */
+    .cd-timeline__block:nth-child(even) .cd-timeline__date {
+        left:auto;
+        right:120%;
+        text-align:right
+    }
+}
+
+@media (min-width: 64rem) {
+    .cd-timeline__circle--hidden,.cd-timeline__content--hidden {
+        visibility:hidden
+    }
+    .cd-timeline__circle--bounce-in {
+        -webkit-animation:cd-bounce-1 0.6s;
+        animation:cd-bounce-1 0.6s
+    }
+    .cd-timeline__content--bounce-in {
+        -webkit-animation:cd-bounce-2 0.6s;
+        animation:cd-bounce-2 0.6s
+    }
+    .cd-timeline__block:nth-child(even) .cd-timeline__content--bounce-in {
+        -webkit-animation-name:cd-bounce-2-inverse;
+        animation-name:cd-bounce-2-inverse
+    }
+    
+    }
+    @-webkit-keyframes cd-bounce-1 {
+    0% {
+    opacity:0;
+        -webkit-transform:scale(0.5);
+        transform:scale(0.5)
+    }
+    60% {
+    opacity:1;
+        -webkit-transform:scale(1.2);
+        transform:scale(1.2)
+    }
+    100% {
+    -webkit-transform:scale(1);
+        transform:scale(1)
+    }
+    
+    }
+    @keyframes cd-bounce-1 {
+    0% {
+    opacity:0;
+        -webkit-transform:scale(0.5);
+        transform:scale(0.5)
+    }
+    60% {
+    opacity:1;
+        -webkit-transform:scale(1.2);
+        transform:scale(1.2)
+    }
+    100% {
+    -webkit-transform:scale(1);
+        transform:scale(1)
+    }
+    
+    }
+    @-webkit-keyframes cd-bounce-2 {
+    0% {
+    opacity:0;
+        -webkit-transform:translateX(-100px);
+        transform:translateX(-100px)
+    }
+    60% {
+    opacity:1;
+        -webkit-transform:translateX(20px);
+        transform:translateX(20px)
+    }
+    100% {
+    -webkit-transform:translateX(0);
+        transform:translateX(0)
+    }
+    
+    }
+    @keyframes cd-bounce-2 {
+    0% {
+    opacity:0;
+        -webkit-transform:translateX(-100px);
+        transform:translateX(-100px)
+    }
+    60% {
+    opacity:1;
+        -webkit-transform:translateX(20px);
+        transform:translateX(20px)
+    }
+    100% {
+    -webkit-transform:translateX(0);
+        transform:translateX(0)
+    }
+    
+    }
+    @-webkit-keyframes cd-bounce-2-inverse {
+    0% {
+    opacity:0;
+        -webkit-transform:translateX(100px);
+        transform:translateX(100px)
+    }
+    60% {
+    opacity:1;
+        -webkit-transform:translateX(-20px);
+        transform:translateX(-20px)
+    }
+    100% {
+    -webkit-transform:translateX(0);
+        transform:translateX(0)
+    }
+    
+    }
+    @keyframes cd-bounce-2-inverse {
+    0% {
+    opacity:0;
+        -webkit-transform:translateX(100px);
+        transform:translateX(100px)
+    }
+    60% {
+    opacity:1;
+        -webkit-transform:translateX(-20px);
+        transform:translateX(-20px)
+    }
+    100% {
+    -webkit-transform:translateX(0);
+        transform:translateX(0)
+    }
+    
+    }
+    
+    

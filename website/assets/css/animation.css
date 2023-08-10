@@ -1,0 +1,203 @@
+/*
+
+ =========================================================
+ * cssアニメーション定義
+ =========================================================
+ 
+ */
+
+
+/* =================================
+    ヘッダータイトル下線アニメーション
+   ==================================*/
+.header_line {
+	position: relative;
+	text-align: center;
+    padding-bottom: 16px;
+}
+
+.header_line:before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	border-bottom: solid 1px #ffffff;
+	transform: translateX(-50%);
+	animation: border_anim 0.5s linear forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+/* =================================
+    画像切り替わりアニメーション
+    （3つの画像を順番に表示）
+   ==================================*/
+.image-chg {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: change-img-anim 15s infinite;
+}
+.image-chg:nth-of-type(1) {
+    animation: change-img-anim-first 15s infinite;
+    animation-delay: 0s;
+}
+.image-chg:nth-of-type(2) {
+    animation-delay: 5s;
+}
+.image-chg:nth-of-type(3) {
+    animation-delay: 10s;
+}
+
+@keyframes change-img-anim-first {
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 0;}
+    100%{ opacity: 0;}
+}
+@keyframes change-img-anim {
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 0;}
+    100%{ opacity: 0;}
+}
+
+
+/* =================================
+    画像表示アニメーション：単体
+   ==================================*/
+.image-unit-chg {
+    width: 100%;
+    opacity: 0;
+    animation: change-img-unit-anim 5s forwards;
+}
+
+.image-unit-chg-2s {
+    width: 100%;
+    opacity: 0;
+    animation: change-img-unit-anim 2s forwards;
+}
+
+@keyframes change-img-unit-anim {
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+
+
+/* =================================
+    透明／移動 アニメーション：遅延
+   ==================================*/
+/* アニメーション前 */
+.u-fade-type-up-1 {
+    transform: translateY(20px);
+    opacity: 0;
+}
+/* トリガー発火でis-activeを付与 */
+.u-fade-type-up-1.is-active {
+    transition: opacity 1.6s, transition 1.6s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.u-fade-type-up-1.is-active.anim-delay1 {
+    transition: opacity 1.6s, transition 1.6s;
+    transition-delay: 0.2s,;
+    transform: translateY(0);
+    opacity: 1;
+}
+.u-fade-type-up-1.is-active.anim-delay2 {
+    transition: opacity 1.6s, transition 1.6s;
+    transition-delay: 0.4s;
+    transform: translateY(0);
+    opacity: 1;
+}
+.u-fade-type-up-1.is-active.anim-delay3 {
+    transition: opacity 1.6s, transition 1.6s;
+    transition-delay: 0.6s;
+    transform: translateY(0);
+    opacity: 1;
+}
+.u-fade-type-up-1.is-active.anim-delay4 {
+    transition: opacity 1.6s, transition 1.6s;
+    transition-delay: 0.8s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* =================================
+    カーテン
+   ==================================*/
+/* アニメーション前 */
+.anim-curtain {
+    transform: translateY(20px);
+    opacity: 0;
+}
+/* トリガー発火でis-activeを付与 */
+.anim-curtain.is-active {
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity linear 0.7s;
+    transition-delay: 0.4s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* =================================
+    透明 アニメーション：時間違い
+   ==================================*/
+.u-fade-type-trance-2 {
+  opacity: 0;
+}
+/* トリガー発火でis-activeを付与 */
+.u-fade-type-trance-2.is-active {
+  transition: opacity 2.0s;
+  opacity: 1;
+}
+
+.u-fade-type-trance-3 {
+  opacity: 0;
+}
+/* トリガー発火でis-activeを付与 */
+.u-fade-type-trance-3.is-active {
+  transition: opacity 3.0s;
+  opacity: 1;
+}
+
+
+/* =================================
+    透明 アニメーション：トリガーなし
+   ==================================*/
+.screen_transition {
+	opacity: 0;
+	animation: anim_screen_transition 1s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes anim_screen_transition {
+	0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+
+/* =================================
+    サイズ アニメーション
+   ==================================*/
+.u-fade-type-scale {
+    transform: scale(0);
+}
+
+/* トリガー発火でis-activeを付与 */
+.u-fade-type-scale.is-active {
+    transition: scale 0.6s;
+    transform: scale(1);
+}
+  
+

@@ -1,0 +1,701 @@
+/*
+
+ =========================================================
+ 共通定義
+ =========================================================
+ 
+ */
+
+
+ 
+/* =================================
+    ナビゲーション
+   ==================================*/
+/* ヘッダ画像表示エリアを画像上部にする */
+.submenu-root {
+    position: relative;
+}
+
+.submenu-root .submenu-hover-item .submenu-wrapper {
+    position: absolute;
+    text-align: right;
+
+    /* 親の真下に配置 */
+    top: 100%;
+    /* 画面端まで表示 */
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+
+    /*** hover可変関連 ***/
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    /* transition-property: all;
+    transition-duration: 0.4s ; */
+}
+
+/* js */
+.submenu-root .submenu-hover-item .submenu-wrapper.active {
+    height: 60px;
+    overflow: visible;
+    opacity: 1;
+    transition: all 0.6s;
+    /* transition-property: opacity;
+    transition-duration: 0.6s ; */
+}
+/* js end */
+
+.submenu-root .submenu-hover-item .submenu-parent {
+    font-family: "Sawarabi Gothic";
+    
+    /* 「.navbar」の「padding-bottom」分設定 */
+    /* ないと背景が重複する */
+    margin-top: 0.625rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    justify-content: center;
+    text-align: end;
+}
+
+.submenu-root .submenu-hover-item .submenu-parent.privacy,
+.submenu-root .submenu-hover-item .submenu-parent.none.privacy,
+.submenu-root .submenu-hover-item .submenu-parent.dark {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.submenu-root .submenu-hover-item .submenu-parent.none {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.submenu-parent li {
+    display: inline-block;
+}
+
+.submenu-size {
+    width: 1110px;
+    text-align: end;
+}
+
+.navbar .navbar-nav.submenu-parent .nav-link:not(.btn) {
+    /* text-transform: capitalize; */
+    font-size: 0.7em;
+    padding: 0.3rem 1.4rem;
+    line-height: 1.625rem;
+    letter-spacing: .08em;
+}
+
+.subMenu_side {
+    display: none;
+}
+
+@media screen and (max-width: 1199px){
+    .submenu-size {
+        width: 930px;
+    }
+}
+
+@media screen and (max-width: 992px){
+
+    /* スマホ用サブメニュー用 */
+    .sidebar-collapse .navbar-collapse .navbar-nav:not(.navbar-logo) .nav-link {
+        margin-top: 0px;
+    }
+
+    .subMenu_side {
+        padding-left: 32px;
+        text-align: left;
+        
+        /* 存在させる */
+        display: block;
+
+        /*** hover可変関連 ***/
+        height: 0px;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.6s;
+    }
+    .subMenu_side.active {
+        height: 240px;
+        overflow: visible;
+        opacity: 1;
+        transition: all 0.6s;
+    }
+
+}
+
+
+/* =================================
+    header
+   ================================= */
+.header_main_title {
+    font-size: 48px;
+}
+
+.header_main_title.kg {
+    letter-spacing: .08em;
+}
+
+.header_sub_title {
+    font-size: 18px;
+    font-family: "Sawarabi Gothic";
+}
+.header_sub_title.font_default {
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+
+.header_message {
+    font-size: 26px;
+    font-family: "Klee One", cursive;
+    margin-top: 36px;
+}
+
+@media screen and (max-width: 992px){
+
+    .header_main_title {
+        font-size: 32px;
+    }
+
+    .header_sub_title {
+        font-size: 12px;
+    }
+    
+    .header_message {
+        font-size: 16px;
+        line-height: 2rem;
+    }
+}
+
+
+
+
+
+/* =================================
+    footer
+   ================================= */
+footer.footer_item{
+    color: #98a2aa;
+}
+
+footer.footer_item a{
+    color: #98a2aa;
+    font-size: 0.9em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+  
+
+/* =================================
+    背景関連
+   ==================================*/
+/* ヘッダ画像表示エリアを画像上部にする */
+.page-header-image.page-header-image-top {
+    background-position: center 5%;
+}
+
+.bg-kg-color {
+    background:#333333cc;
+}
+
+.clear-filter[filter-color="kg-color"] {
+    background: #2c2c2c33;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, #2c2c2c33, #00b0f099);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, #2c2c2c33, #00b0f099);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, #2c2c2c33, #00b0f099);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(0deg, #2c2c2c33, #00b0f099);
+    /* Standard syntax */
+}
+
+.clear-filter[filter-color="kg-color-rec"] {
+    background: #2c2c2c33;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, #2c2c2c33, #00b0f099);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, #2c2c2c33, #00b0f099);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, #2c2c2c33, #00b0f099);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(0deg, #ffffff33, #ffffff33);
+    background: linear-gradient(0deg, #00b0f099, #2c2c2c33);
+    background: linear-gradient(0deg, #2c2c2c33, #00b0f099);
+    /* Standard syntax */
+}
+
+.clear-filter[filter-color="anniversary"] {
+    background: #2c2c2c33;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, #2c2c2c33, #f0ec0099);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, #2c2c2c33, #f0ec0099);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, #2c2c2c33, #f0ec0099);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(0deg, #2c2c2c33, #f0ec0099);
+    /* Standard syntax */
+}
+
+.clear-filter[filter-color="philosophy"] {
+    background: #0037176c;
+}
+
+
+/* =================================
+    テキスト関連
+   ==================================*/
+/* 項目詳細文章 */
+.item_detail_text {
+    font-family: "Sawarabi Gothic";
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: .1em;
+}
+
+
+@media screen and (max-width: 992px){
+  
+    .item_detail_text {
+        font-size: 13px;
+    }
+}
+
+
+/* =================================
+    セクション／エリア関連
+   ==================================*/
+
+.section_accent {
+    background-color: #FFF8F8;
+    padding: 10em 0;
+}
+
+.section_none_bg {
+    background-color: #ffffff;
+    padding: 10em 0;
+}
+
+.section_title_primary_color {
+    color: #5171a8;
+}
+
+.section_title_area {
+    padding-bottom: 30px;
+}
+
+.section_title {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.section_sub_title {
+    font-size: 16px;
+    font-family: "Sawarabi Gothic";
+}
+
+.section_bg_primary {
+    background-color: #fff5f5;
+}
+
+.section_bg_primary input{
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+
+    .section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .section_title {
+        font-size: 28px;
+    }
+    
+    .section_title_area {
+        padding-bottom: 0px;
+    }
+
+    .section_sub_title {
+        font-size: 16px;
+    }
+
+    .section_title.short_below_space {
+        margin-bottom: 12px;
+    }
+}
+
+/*
+    セクション：2行＋簡単な文関連のセクション
+*/
+.section_context_header.bg {
+    background-color: #ffefef;
+}
+
+.section_title_message {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section_sub_title_message {
+    font-size: 16px;
+    font-family: "Sawarabi Gothic";
+}
+
+.section_simple_sentence {
+    font-family: "Sawarabi Gothic";
+    font-size: 14px;
+    line-height: 2.0;
+    letter-spacing: .1em;
+}
+
+@media screen and (max-width: 992px){
+
+    .section_context_header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section_title_message {
+        font-size: 18px;
+    }
+    .section_sub_title_message {
+        font-size: 14px;
+    }
+    .section_simple_sentence {
+        font-size: 12px;
+    }
+}
+
+
+/* 
+    セクション：信念関連のセクション
+*/
+.section_belief_message {
+    color: #9999b0;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.section_belief_sub_message {
+    font-size: 15px;
+    font-family: "Sawarabi Gothic";
+}
+
+@media screen and (max-width: 992px){
+
+    .section_belief_message {
+        font-size: 18px;
+    }
+
+    .section_belief_sub_message {
+        font-size: 12px;
+    }
+}
+
+/* =================================
+    項目関連
+   ==================================*/
+
+.section_item_title {
+    font-weight: 700;
+    font-size: 28px;
+    padding-top: 30px;
+    margin-bottom: 12px;
+}
+.section_item_title.side {
+    padding-top: 0px;
+}
+.section_item_title.middle {
+    font-size: 24px;
+}
+.section_item_title.title_border {
+    border-bottom: solid 1px #9b9b9b;
+}
+
+@media screen and (max-width: 992px){
+    .section_item_title {
+      font-size: 22px;
+    }
+
+    .section_item_title.middle {
+        font-size: 18px;
+    }
+}
+
+
+/* =================================
+    UI関連
+   ==================================*/
+/* ボタンデザイン */
+.view_more {
+    background-color: #ffffff;
+    color: #393e46;
+    border: 1px solid rgba(161, 167, 177, 0.8);
+    width: 200px;
+}
+
+.view_more.dark {
+    background-color: #393E46;
+    color: #F4F5F9;
+    border: 1px solid #393e46;
+}
+
+
+/* リンク画像デザイン */
+.link-img-wrapper {
+    height: 380px;
+    padding: 0;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-img-wrapper:before {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  
+  /* hover 発生時 */
+  cursor: pointer;
+  transition: transform 0.8s cubic-bezier(.38,.98,.7,1);
+  
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.link-img-wrapper:hover:before {
+  transform-origin: right top;
+  transform: scale(0, 1);
+}
+
+.link-img-wrapper:hover .container {
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.link-img-wrapper .recruit-img {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.link-img-wrapper .content-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 880px;
+}
+
+.link-img-wrapper .container {
+  height: 100%;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+.link-img-wrapper h5 {
+  font-family: "Sawarabi Gothic";
+}
+
+
+@media screen and (max-width: 992px){
+
+    .view_more {
+        width: 120px;
+        font-size: 12px;
+    }
+}
+  
+
+
+
+/* =================================
+    画像関連
+   ==================================*/
+.img_blur {
+  position: relative;
+  z-index: 0;
+}
+.img_blur:before {
+  background-color: rgba(0, 0, 0, 0.2); 
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+}
+
+.middle_img,
+.item_img img {
+    background-position: center center;
+    background-size: contain;
+}
+
+@media screen and (max-width: 992px){
+    .middle_img {
+        padding: 32px;
+    }
+}
+
+/* =================================
+    テーブル関連
+   ==================================*/
+.information_line {
+    font-family: "Sawarabi Gothic";
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.information_line .item_title {
+    color: #535353;
+    line-height: 1.61em;
+    font-size: 15px;
+    letter-spacing: .1em;
+}
+.information_line .item_contents {
+    width: 100%;
+    color: #535353;
+    display: block;
+    line-height: 1.61em;
+    font-size: 15px;
+    letter-spacing: .1em;
+    border-bottom: solid 1px #b8b8b8;
+    padding-bottom: 10px;
+}
+.information_line .item_contents.none_border {
+    border-bottom: solid 0px #b8b8b8;
+    padding-bottom: 0px;
+}
+
+
+@media screen and (max-width: 992px){
+
+    .information_line {
+        padding-left: 12px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .information_line .item_contents {
+        font-size: 14px;
+    }
+    .information_line .item_contents.detail {
+        padding-left: 12px;
+    }
+}
+
+
+
+
+/* =================================
+    フォント関連
+   ==================================*/
+.wf-sawarabigothic {
+    font-family: "Sawarabi Gothic";
+}
+
+.wf-sawarabimincho {
+    font-family: "Sawarabi Mincho";
+}
+  
+.wf-kleeone {
+  font-family: "Klee One", cursive;
+}
+
+.wf-kleeone-bold {
+  font-family: "Klee One", cursive;
+  font-weight: 600;
+}
+
+
+/* =================================
+    改行
+   ==================================*/
+.br_under_md {
+    display: none;
+}
+.br_under_sm {
+    display: none;
+}
+.br_under_xs_half {
+    display: none;
+}
+.br_over_md {
+    display: none;
+}
+.br_over_sm {
+    display: none;
+}
+.br_over_md_under_lg {
+    display: none;
+}
+
+/* ～992px：改行有効 */
+@media screen and (max-width: 992px) {
+    .br_under_md {
+        display: block;
+    }
+}
+/* ～768px：改行有効 */
+@media screen and (max-width: 768px) {
+    .br_under_sm {
+        display: block;
+    }
+}
+/* ～360px：改行有効 */
+@media screen and (max-width: 370px) {
+    .br_under_xs_half {
+        display: block;
+    }
+}
+
+/* 768px～：改行有効 */
+@media screen and (min-width: 768px) {
+    .br_over_sm {
+        display: block;
+    }
+}
+/* 992px～：改行有効 */
+@media screen and (min-width: 992px) {
+    .br_over_md {
+        display: block;
+    }
+}
+
+/* 768～1200px：改行有効 */
+@media screen and (768px <= width <= 1200px ) {
+    .br_over_md_under_lg {
+        display: block;
+    }
+}
+
+/* =================================
+    その他
+   ==================================*/
+/* リンクデコレーション無効化 */
+a {
+    text-decoration: none;
+}
