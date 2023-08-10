@@ -7,6 +7,12 @@
  */
 
 
+/* =================================
+    全体
+   ==================================*/
+p {
+    letter-spacing: .1em;
+}
  
 /* =================================
     ナビゲーション
@@ -78,13 +84,17 @@
     text-align: end;
 }
 
-.navbar .navbar-nav.submenu-parent .nav-link:not(.btn) {
+.navbar .navbar-nav.submenu-parent .nav-link {
     /* text-transform: capitalize; */
     font-size: 0.7em;
     padding: 0.3rem 1.4rem;
-    line-height: 1.625rem;
+    /* line-height: 1.6em; */
     letter-spacing: .08em;
 }
+.navbar-nav .nav-item p {
+    letter-spacing: .02em;
+}
+
 
 .subMenu_side {
     display: none;
@@ -143,6 +153,7 @@
 }
 .header_sub_title.font_default {
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: .04em;
 }
 
 .header_message {
@@ -163,13 +174,9 @@
     
     .header_message {
         font-size: 16px;
-        line-height: 2rem;
+        line-height: 2.0em;
     }
 }
-
-
-
-
 
 /* =================================
     footer
@@ -182,7 +189,7 @@ footer.footer_item a{
     color: #98a2aa;
     font-size: 0.9em;
     font-weight: 700;
-    line-height: 1.2;
+    /* line-height: 1.4em; */
 }
   
 
@@ -251,8 +258,8 @@ footer.footer_item a{
 .item_detail_text {
     font-family: "Sawarabi Gothic";
     font-size: 14px;
-    line-height: 1.8;
-    letter-spacing: .1em;
+    line-height: 1.8em;
+    /* letter-spacing: .1em; */
 }
 
 
@@ -349,8 +356,8 @@ footer.footer_item a{
 .section_simple_sentence {
     font-family: "Sawarabi Gothic";
     font-size: 14px;
-    line-height: 2.0;
-    letter-spacing: .1em;
+    line-height: 2.0em;
+    /* letter-spacing: .1em; */
 }
 
 @media screen and (max-width: 992px){
@@ -376,7 +383,7 @@ footer.footer_item a{
     セクション：信念関連のセクション
 */
 .section_belief_message {
-    color: #9999b0;
+    color: #787891;
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 10px;
@@ -572,17 +579,17 @@ footer.footer_item a{
 }
 .information_line .item_title {
     color: #535353;
-    line-height: 1.61em;
+    line-height: 1.6em;
     font-size: 15px;
-    letter-spacing: .1em;
+    /* letter-spacing: .1em; */
 }
 .information_line .item_contents {
     width: 100%;
     color: #535353;
     display: block;
-    line-height: 1.61em;
+    line-height: 1.6em;
     font-size: 15px;
-    letter-spacing: .1em;
+    /* letter-spacing: .1em; */
     border-bottom: solid 1px #b8b8b8;
     padding-bottom: 10px;
 }

@@ -45,32 +45,15 @@
 .home_text_item {
   font-family: "Sawarabi Gothic";
   font-size: 15px;
-  line-height: 1.8;
-  letter-spacing: .1em;
+  line-height: 1.8em;
+  /* letter-spacing: .1em; */
   color: #3d3d3d;
 }
 
 .home_anniversary_section {
   background: #ffffff;
   color: #7a9eaf !important;
-  /* position: relative; */
 }
-
-/* .home_anniversary_section.-visible:before {
-  transform: translate(0, 0);
-}
-
-.home_anniversary_section:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translate(0, 100%);
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .6s;
-  content: '';
-  background-color: #ffffff;
-} */
 
 .section_pd_tmp {
   padding-top: 120px;
@@ -136,7 +119,7 @@
 .access-detail{
   font-family: "Sawarabi Gothic";
   text-align: center;
-  line-height: 1.61em;
+  line-height: 1.6em;
   font-size: 1.1em;
   letter-spacing: .1em;
 }
@@ -214,7 +197,7 @@
 
 .philosophy-text-container {
   padding-left: 60px;
-  color: #797979;
+  color: #111111;
 }
 
 .philosophy-item {
@@ -280,8 +263,8 @@
   justify-content: center;
   font-family: "Klee One";
   font-size: 14px;
-  letter-spacing: .1em;
-  line-height: 1.61em;
+  /* letter-spacing: .1em; */
+  line-height: 1.6em;
   color: rgb(7, 7, 7);
   padding-top: 40px;
 }
@@ -326,12 +309,12 @@
 .service_header_detail {
   font-family: "Sawarabi Gothic";
   font-size: 15px;
-  line-height: 1.8;
-  letter-spacing: .1em;
+  line-height: 1.8em;
+  /* letter-spacing: .1em; */
 }
 
 .service_item_container {
-  color: #797979;
+  color: #414141;
   padding: 48px;
 }
 
@@ -364,7 +347,7 @@
 .service_case_list {
   font-family: "Sawarabi Gothic";
   font-size: 14px;
-  line-height: 2.0;
+  line-height: 2.0em;
   letter-spacing: .1em;
 
   margin-top: 0px;
@@ -429,9 +412,9 @@
   border-radius: 0.25rem;
 }
 
-.job_top_title {
+.job_section_title {
   color: #3261AB;
-  line-height: 1.3em;
+  /* line-height: 1.4em; */
   letter-spacing: .1em;
   font-size: 28px;
   margin-bottom: 20px;
@@ -442,7 +425,7 @@
   font-family: "Sawarabi Gothic";
   line-height: 2.4em;
   font-size: 14px;
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
 }
 
 .process_contents_wrapper {
@@ -488,10 +471,10 @@
 }
 .process_detail_wrapper p {
   color: var( --cd-carrer-process-sub );
-  line-height: 2em;
+  line-height: 2.0em;
   font-size: 14px;
   font-family: "Sawarabi Gothic";
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
 }
 
 .external_link_wrapper {
@@ -520,7 +503,7 @@
   .process_detail_wrapper p {
     line-height: 1.6em;
     font-size: 14px;
-    letter-spacing: .1em;
+    /* letter-spacing: .1em; */
   }
   
 }
@@ -543,11 +526,11 @@
     padding: 20px;
 }
 
-.job_top_message {
+.job_section_message {
   font-family: "Sawarabi Gothic";
-  line-height: 1.61em;
+  line-height: 1.6em;
   font-size: 16px;
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
 }
 
 .job_detail_area {
@@ -556,8 +539,8 @@
 .job_detail_area p {
   font-family: "Sawarabi Gothic";
   font-size: 15px;
-  line-height: 1.8;
-  letter-spacing: .1em;
+  line-height: 1.8em;
+  /* letter-spacing: .1em; */
   color: #3d3d3d;
 }
 
@@ -589,7 +572,7 @@
 
 .benefit_title {
   font-size: 16px;
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
 }
 
 .benefit_contents {
@@ -601,11 +584,11 @@
 
 @media screen and (max-width: 992px){
 
-  .job_top_title {
+  .job_section_title {
     font-size: 22px;
   }
 
-  .job_top_message {
+  .job_section_message {
     font-size: 12px;
   }
 
@@ -748,7 +731,7 @@
   font-family: "Sawarabi Gothic";
   line-height: 2.4em;
   font-size: 14px;
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
 }
 
 .want_contents {
@@ -761,10 +744,10 @@
 
 .want_contents p {
   color: #3261AB;
-  line-height: 1.61em;
+  line-height: 1.6em;
   font-size: 14px;
   font-family: "Sawarabi Gothic";
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -804,7 +787,7 @@
 } */
 .question_line p {
   line-height: 1.6em;
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
   font-size: 14px;
 }
 
@@ -812,7 +795,7 @@
   width: 100%;
   color: #535353;
   display: block;
-  line-height: 1.61em;
+  line-height: 1.6em;
   font-size: 14px;
   font-family: "Sawarabi Gothic";
   letter-spacing: .1em;
@@ -828,7 +811,7 @@
 .question_line .question_answer {
   color: #535353;
   display: block;
-  line-height: 1.61em;
+  line-height: 1.6em;
   font-size: 14px;
   font-family: "Sawarabi Gothic";
   letter-spacing: .1em;
@@ -856,8 +839,8 @@
 .education_top_tx {
   color: #363636;
   font-family: "Sawarabi Gothic";
-  line-height: 1.61em;
-  letter-spacing: .1em;
+  line-height: 1.8em;
+  /* letter-spacing: .1em; */
   font-size: 14px;
 }
 
@@ -869,7 +852,6 @@
   
   color: #363636;
   font-family: "Sawarabi Gothic";
-  line-height: 1.61em;
   letter-spacing: .1em;
 }
 .education_wrapper h5 {
@@ -877,6 +859,7 @@
 }
 .education_wrapper p {
   font-size: 14px;
+  line-height: 1.8em;
 }
 
 .education_sub_title {
@@ -915,7 +898,7 @@
   
   .want_contents p {
     font-size: 14px;
-    letter-spacing: .1em;
+    /* letter-spacing: .1em; */
     margin-bottom: 20px;
     margin-top: 20px;
   }
@@ -950,7 +933,7 @@
   .fix_scroll_text_area {
     width: 90%;
     padding: 8em 0 4em 0;
-    line-height: 1.8;
+    line-height: 1.8em;
     letter-spacing: .1em;
   }
   .fix_scroll_text_area .large_message {
@@ -1112,7 +1095,7 @@
 }
 
 .privacy_text_common {
-  line-height: 1.8;
+  line-height: 1.8em;
   letter-spacing: .1em;
 }
 
@@ -1232,15 +1215,15 @@
 .contact_sub_title {
   font-family: "Sawarabi Gothic";
   font-size: 14px;
-  line-height: 2.0;
-  letter-spacing: .1em;
+  line-height: 2.0em;
+  /* letter-spacing: .1em; */
   padding-bottom: 6px;
 }
 
 .contact_contents {
   font-family: "Sawarabi Gothic";
   font-size: 14px;
-  line-height: 2.0;
+  line-height: 2.0em;
   letter-spacing: .1em;
   margin-top: 20px;
 }
@@ -1277,8 +1260,8 @@
 .margin_notes {
   font-family: "Sawarabi Gothic";
   font-size: 15px;
-  line-height: 2.0;
-  letter-spacing: .1em;
+  line-height: 2.0em;
+  /* letter-spacing: .1em; */
   margin-top: 16px;
 }
 
@@ -1355,7 +1338,7 @@
   color: #354C6E;
   font-family: "Sawarabi Gothic";
   font-size: 24px;
-  line-height: 1.3em;
+  /* line-height: 1.4em; */
   letter-spacing: .1em;
 }
 
@@ -1364,7 +1347,7 @@
   font-family: "Sawarabi Gothic";
   line-height: 2.4em;
   font-size: 1.0em;
-  letter-spacing: .1em;
+  /* letter-spacing: .1em; */
 }
 
 .u-fade-anniversary-picture {
