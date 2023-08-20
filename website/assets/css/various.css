@@ -1133,8 +1133,24 @@
   font-family: "Klee One";
 }
 
+.list_number {
+  list-style-type: lower-alpha;
+}
+.list_number_right_bracket {
+  list-style-type: lower-alpha;
+}.list_number_brackets {
+  list-style-type: lower-alpha;
+}.list_number_circle {
+  list-style-type: lower-alpha;
+}.list_lower_alpha {
+  list-style-type: lower-alpha;
+}
+
+
+
+
 .privacy_sub_list {
-  list-style-type: upper-latin;
+  list-style-type: lower-alpha;
 }
 
 .privacy_minor_list {
