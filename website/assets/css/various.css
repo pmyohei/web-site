@@ -1118,43 +1118,17 @@
 
 .privacy_detail,
 .privacy_headline,
-.privacy_headline p,
-.privacy_headline li p {
+/* .privacy_headline p, */
+.privacy_wrapper p {
   font-size: 16px;
 }
-
-.privacy_btn_outline {
-  padding: 4px 12px;
-  background-color: #ffffff;
-  color: #393e46;
-  border: 1px solid #393e46;
-  width: 200px;
-  font-size: 15px;
-  font-family: "Klee One";
-}
-
-.list_number {
-  list-style-type: lower-alpha;
-}
-.list_number_right_bracket {
-  list-style-type: lower-alpha;
-}.list_number_brackets {
-  list-style-type: lower-alpha;
-}.list_number_circle {
-  list-style-type: lower-alpha;
-}.list_lower_alpha {
-  list-style-type: lower-alpha;
+.privacy_wrapper table {
+  font-size: 14px;
 }
 
 
-
-
-.privacy_sub_list {
-  list-style-type: lower-alpha;
-}
-
-.privacy_minor_list {
-  list-style-type: lower-roman;
+.privacy_wrapper ol {
+  list-style-type: none;
 }
 
 .privacy_wrapper ol li,
@@ -1163,16 +1137,23 @@
 .privacy_wrapper table {
   margin-top: 20px;
 }
-
+.privacy_wrapper li.m_txt-indent {
+  padding-left: calc(16px + 0.8em);
+}
 .privacy_wrapper li p {
   margin-top: 8px;
 }
-
 .privacy_wrapper table thead th {
   padding: 0  0.75rem;
 }
 
+
+
 @media screen and (max-width: 992px){
+
+  .section_privacy {
+    padding-bottom: 20px;
+  }
 
   .privacy_wrapper {
     margin-left: 12px;
@@ -1185,18 +1166,16 @@
     padding-bottom: 8px;
   }
 
+  .privacy_wrapper h5 {
+    font-size: 14px;
+  }
   .privacy_detail,
   .privacy_headline,
-  .privacy_headline li p {
+  .privacy_wrapper p {
     font-size: 13px;
   }
-  
-  .privacy_sub_list {
-    padding-left: 1em;
-  }
-  
-  .privacy_minor_list {
-    padding-left: 1em;
+  .privacy_wrapper table {
+    font-size: 10px;
   }
   
   .privacy_wrapper ol li,
@@ -1206,10 +1185,10 @@
     margin-top: 12px;
   }
 
-  .privacy_btn_outline {
-    padding: 4px 12px;
-    width: 120px;
-    font-size: 14px;
+  .privacy_wrapper table thead th,
+  .privacy_wrapper table tbody th,
+  .privacy_wrapper table tbody td {
+    padding: 1px 4px;
   }
 }
 

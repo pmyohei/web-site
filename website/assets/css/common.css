@@ -425,6 +425,15 @@ footer.footer_item a{
     border-bottom: solid 1px #9b9b9b;
 }
 
+.m_txt-indent {
+    position: relative;
+}
+.m_txt-indent > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 @media screen and (max-width: 992px){
     .section_item_title {
       font-size: 22px;
