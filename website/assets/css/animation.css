@@ -104,31 +104,31 @@
 }
 /* トリガー発火でis-activeを付与 */
 .u-fade-type-up-1.is-active {
-    transition: opacity 1.6s, transition 1.6s;
+    transition: opacity 1.6s, transform 1.6s;
     transform: translateY(0);
     opacity: 1;
 }
 
 .u-fade-type-up-1.is-active.anim-delay1 {
-    transition: opacity 1.6s, transition 1.6s;
+    transition: opacity 1.6s, transform 1.6s;
     transition-delay: 0.2s,;
     transform: translateY(0);
     opacity: 1;
 }
 .u-fade-type-up-1.is-active.anim-delay2 {
-    transition: opacity 1.6s, transition 1.6s;
+    transition: opacity 1.6s, transform 1.6s;
     transition-delay: 0.4s;
     transform: translateY(0);
     opacity: 1;
 }
 .u-fade-type-up-1.is-active.anim-delay3 {
-    transition: opacity 1.6s, transition 1.6s;
+    transition: opacity 1.6s, transform 1.6s;
     transition-delay: 0.6s;
     transform: translateY(0);
     opacity: 1;
 }
 .u-fade-type-up-1.is-active.anim-delay4 {
-    transition: opacity 1.6s, transition 1.6s;
+    transition: opacity 1.6s, transform 1.6s;
     transition-delay: 0.8s;
     transform: translateY(0);
     opacity: 1;
