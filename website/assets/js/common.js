@@ -5,7 +5,7 @@ $(function () {
     // ページ内にjs-scroll-triggerクラスが存在した場合
     if ($('.js-scroll-trigger').length) {
         // animation呼び出し
-        scrollAnimation( 300 );
+        scrollAnimation( 260 );
     }
 
     if ($('.js-scroll-trigger-bottom').length) {
