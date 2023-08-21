@@ -155,7 +155,7 @@ p {
     font-size: 18px;
     font-family: "Sawarabi Gothic";
 }
-.header_sub_title.font_default {
+.header_sub_title.home {
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
     letter-spacing: .04em;
 }
@@ -168,19 +168,39 @@ p {
 
 @media screen and (max-width: 992px){
 
-    .header_main_title {
+    .header_main_title.kg {
+        font-size: 38px;
+    }
+    .header_main_title:not(.kg) {
         font-size: 32px;
     }
-
-    .header_sub_title {
+    
+    .header_sub_title.home {
+        font-size: 16px;
+    }
+    .header_sub_title:not(.home) {
         font-size: 12px;
     }
-    
+
     .header_message {
-        font-size: 16px;
+        font-size: 20px;
         line-height: 2.0em;
     }
 }
+
+@media screen and (max-width: 768px){
+
+    .header_main_title.kg {
+        font-size: 32px;
+    }
+    .header_sub_title.home {
+        font-size: 12px;
+    }
+    .header_message {
+        font-size: 16px;
+    }
+}
+
 
 /* =================================
     footer
