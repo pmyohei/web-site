@@ -5,12 +5,12 @@ $(function () {
     // ページ内にjs-scroll-triggerクラスが存在した場合
     if ($('.js-scroll-trigger').length) {
         // animation呼び出し
-        scrollAnimation( 100 );
+        scrollAnimation( 300 );
     }
 
     if ($('.js-scroll-trigger-bottom').length) {
         // animation呼び出し
-        scrollAnimationDelay( 400 );
+        scrollAnimationDelay( 200 );
     }
 
     // ページ内にscrollクラスが存在した場合

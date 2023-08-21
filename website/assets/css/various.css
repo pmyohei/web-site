@@ -52,7 +52,7 @@
 
 .home_anniversary_section {
   background: #ffffff;
-  color: #7a9eaf !important;
+  color: #598092 !important;
 }
 
 .section_pd_tmp {
@@ -236,26 +236,27 @@
     社長メッセージ画面
    ================================= */
 
-  
+.ceo_bg {
+  background: linear-gradient(45deg, #dfdcd8, #ffffff);
+}
+   
 .ceo_img {
   width: 100%;
-  /* width: 320px; */
   height: 100%;
 }
 .ceo_top_message {
   font-family: "Klee One", cursive;
   font-size: 20px;
   font-weight: 600;
+  line-height: 1.6em;
   margin-left: 20px;
-  text-align: start;
 }
 
 .ceo_name {
   font-family: "Klee One", cursive;
   font-size: 16px;
-  margin-top: 10px;
-  margin-right: 40px;
-  text-align: right;
+  margin-top: 32px;
+  margin-left: 20px;
 }
 
 .ceo_description {
@@ -266,38 +267,39 @@
   /* letter-spacing: .1em; */
   line-height: 1.6em;
   color: rgb(7, 7, 7);
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
-
-
 @media screen and (max-width: 992px){
-
-  .ceo_bg {
-    /* background: linear-gradient(0deg, #caeeff, #fff1eb);
-    background: linear-gradient(0deg, #e2d1c3, #fdfcfb);
-    background: linear-gradient(90deg, #caeeff, #fff1eb); */
-  }
 
   .ceo_top_message {
     font-size: 18px;
   }
-
   .ceo_name {
     font-size: 14px;
     margin-top: 12px;
     margin-right: 10px;
     text-align: right;
   }
-  
   .ceo_description {
-    font-size: 13px;
     padding-top: 20px;
   }
 }
 
+@media screen and (max-width: 544px){
 
-
+  .ceo_top_message {
+    font-size: 13px;
+    margin-left: 0px;
+    text-align: center;
+  }
+  .ceo_name {
+    font-size: 12px;
+  }
+  .ceo_description p {
+    font-size: 13px;
+  }
+}
 
 /* =================================
     事業概要／実績画面
