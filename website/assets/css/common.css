@@ -127,12 +127,16 @@ p {
         transition: all 0.6s;
     }
     .subMenu_side.active {
-        height: 240px;
         overflow: visible;
         opacity: 1;
         transition: all 0.6s;
     }
-
+    .subMenu_side.active.company {
+        height: 190px;
+    }
+    .subMenu_side.active.recruit {
+        height: 280px;
+    }
 }
 
 

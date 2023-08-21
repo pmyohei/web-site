@@ -339,13 +339,25 @@ $(function(){
       // 開いているサブメニューをクローズ
       if( subMenu.hasClass('active') ){
         subMenu.removeClass('active');
+        subMenu.removeClass('company');
+        subMenu.removeClass('recruit');
         return false;
       }
     });
 
+    // クリックされたメニューのサブメニュー数
+    var subMenuNum = clickedSubMenu.children().length;
+
     // クリックされたメニューのサブメニューを表示
     clickedSubMenu.addClass("active");
 
+    // サブメニュー数に応じた高さを設定
+    // !「children().length」の値は、『「実際の小項目数」＋１』
+    if( subMenuNum == 5 ){
+      clickedSubMenu.addClass("company");  
+    } else {
+      clickedSubMenu.addClass("recruit");  
+    }
   });
 });
 
