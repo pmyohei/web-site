@@ -1,3 +1,11 @@
+/*!
+
+ =========================================================
+ * Timeline js
+ =========================================================
+
+ */
+
 (function(){
   // Vertical Timeline - by CodyHouse.co
 	function VerticalTimeline( element ) {
