@@ -1,3 +1,10 @@
+/*!
+
+ =========================================================
+ * Smooth Scroll パララックス設定
+ =========================================================
+
+ */
 
 .page-header .page-header-image {
 	--overflow: 120px;
@@ -11,10 +18,21 @@
 	will-change: transform;
 }
 
-.tmp--inv {
-	display: none;
+.inner .page-header-image {
+	/* --overflow: 120px; */
+	height: calc(100% + (2 * var(--overflow)));
+	top: calc( -1 * var(--overflow));
+	width: 100%;
+	position: absolute;
+	background-image: var(--image);
+    background-size: cover;
+	background-position: center center;
+	will-change: transform;
 }
 
+.inner .page-header-image.anniversary {
+	--overflow: 200px;
+}
 
 /* =================================
     ヘッダ画像URL
@@ -93,4 +111,7 @@
 /* 20th */
 .header__img--anniversary {
 	--image: url('../img/anniversary_header.jpg');
+}
+.inner__img--anniversary {
+	--image: url('../img/anniversary_image.jpg');
 }

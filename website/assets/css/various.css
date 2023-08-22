@@ -1306,18 +1306,25 @@
 .anniversary-header .anniversary-header-image {
   position: absolute;
   background-size: cover;
-  background-position: top center;
+  /* background-size: contain; */
+  background-position: center center;
   width: 100%;
-  height: 120%;
+  height: 100%;
 }
 
-.anniversary-sub{
+.anniversary-head_wrapper {
+  /* margin-top: 25vh;
+  margin-bottom: 10vh; */
+}
+
+
+.anniversary-sub {
   color: #252525;
   font-size: 1.4em;
   font-weight: 500;
 }
 
-.anniversary-sub-bg {
+/* .anniversary-sub-bg {
   position: relative;
   background: linear-gradient(0deg, #ffffff, #D7D4C6);
 }
@@ -1337,7 +1344,7 @@
   content: '';
 
   background-color: #ffffff;
-}
+} */
 
 .anniversary_message {
   color: #354C6E;
@@ -1355,16 +1362,7 @@
   /* letter-spacing: .1em; */
 }
 
-.u-fade-anniversary-picture {
-  transform: translateY(60px);
-  opacity: 0;
-}
-.u-fade-anniversary-picture.is-active {
-  transition: 1.0s ease-out;
-  transform: translateY(0);
-  /* transition-delay: 0.6s; */
-  opacity: 1;
-}
+
 
 @media screen and (max-width: 992px){
 
@@ -1376,5 +1374,12 @@
     font-size: 14px;
     line-height: 2.0em;
     letter-spacing: .08em;
+  }
+
+  .anniversary-header .anniversary-header-image {
+    /* background-size: cover;
+    background-position: top center;
+    width: 100%; */
+    /* height: auto; */
   }
 }
