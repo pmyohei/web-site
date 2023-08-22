@@ -73,7 +73,7 @@
   }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .home_item {
     padding-top: 0px;
@@ -148,7 +148,7 @@
   display: block;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .route {
     padding-right: 0px;
@@ -211,7 +211,7 @@
   font-size: 15px;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
   
   .philosophy-container {
     margin-top: 0px;
@@ -305,7 +305,7 @@
   flex-direction: row-reverse;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .ceo_top_message {
     font-size: 18px;
@@ -335,7 +335,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
 
   .ceo_text_side_wrapper {
     padding-left: 60px;
@@ -343,7 +343,7 @@
   }
 }
 
-@media screen and (max-width: 544px){
+@media screen and (max-width: 543px){
 
   .ceo_top_message_wrapper {
     padding-top: 60px;
@@ -442,7 +442,7 @@
   margin-top: 40px;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .service_header_detail {
     font-size: 14px;
@@ -567,7 +567,7 @@
   margin-top: 20px;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .wrapper_carrer_process {
     justify-content: space-around;
@@ -666,7 +666,7 @@
   letter-spacing: .2em;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .job_section_title {
     font-size: 22px;
@@ -735,7 +735,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
 
   .page-header .page-header-image.jobtop_header {
     background-position: left 40% bottom 50%;
@@ -963,7 +963,7 @@
 }
 
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .fix_scroll_text_area .large_message {
     margin-top: 2.8em;
@@ -1019,7 +1019,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   .recruit_fix_bg {
     background-image: url('../../assets/img/recruit_header_small.jpg');
   }
@@ -1066,7 +1066,7 @@
   margin: auto;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
   .section_carrer_process {
     padding-left: 12px;
     padding-right: 12px;
@@ -1077,7 +1077,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   .process-block.carrer {
     width: 200px;
   }
@@ -1112,7 +1112,7 @@
 }
 
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .club_item {
     padding-bottom: 20px;
@@ -1124,7 +1124,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   .club_item_detail_block {
     padding-top: 32px;
   }
@@ -1160,7 +1160,7 @@
   padding-top: 12px;
 }
 
-@media screen and (max-width: 992px){  
+@media screen and (max-width: 991px){  
   .activity_item_img {
     padding-bottom: 10px;
   }
@@ -1231,7 +1231,7 @@
 }
 
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .section_privacy {
     padding-bottom: 20px;
@@ -1315,7 +1315,7 @@
   margin-top: 20px;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .page-header .page-header-image.contact_header {
     background-position: top center;
@@ -1356,7 +1356,7 @@
   margin-top: 32px;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .margin_title {
     font-size: 18px;
@@ -1446,7 +1446,7 @@
 
 
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 
   .anniversary_message {
     font-size: 16px;
