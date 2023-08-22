@@ -95,7 +95,7 @@
 
 
 /* =================================
-    透明／移動 アニメーション：遅延
+    透明／移動 アニメーション
    ==================================*/
 /* アニメーション前 */
 .u-fade-type-up-1 {
@@ -109,30 +109,31 @@
     opacity: 1;
 }
 
-.u-fade-type-up-1.is-active.anim-delay1 {
-    transition: opacity 1.6s, transform 1.6s;
-    transition-delay: 0.2s,;
-    transform: translateY(0);
-    opacity: 1;
+/* ---------------------
+    ページ毎 遅延指定
+   ---------------------*/
+/* 採用Top */
+.benefit_item:nth-child(2).u-fade-type-up-1.is-active {
+    transition-delay: 0.2s;
 }
-.u-fade-type-up-1.is-active.anim-delay2 {
-    transition: opacity 1.6s, transform 1.6s;
+.benefit_item:nth-child(3).u-fade-type-up-1.is-active {
     transition-delay: 0.4s;
-    transform: translateY(0);
-    opacity: 1;
 }
-.u-fade-type-up-1.is-active.anim-delay3 {
-    transition: opacity 1.6s, transform 1.6s;
+.benefit_item:nth-child(4).u-fade-type-up-1.is-active {
     transition-delay: 0.6s;
-    transform: translateY(0);
-    opacity: 1;
 }
-.u-fade-type-up-1.is-active.anim-delay4 {
-    transition: opacity 1.6s, transform 1.6s;
+.benefit_item:nth-child(5).u-fade-type-up-1.is-active {
     transition-delay: 0.8s;
-    transform: translateY(0);
-    opacity: 1;
 }
+
+/* Recruit */
+.process-block:nth-child(2).u-fade-type-up-1.is-active {
+    transition-delay: 0.2s;
+}
+.process-block:nth-child(3).u-fade-type-up-1.is-active {
+    transition-delay: 0.4s;
+}
+
 
 /* =================================
     カーテン
