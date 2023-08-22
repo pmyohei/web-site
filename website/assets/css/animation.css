@@ -179,7 +179,7 @@
 .screen_transition {
 	opacity: 0;
 	animation: anim_screen_transition 1s forwards;
-    animation-delay: 0.2s;
+    animation-delay: 0.4s;
 }
 
 @keyframes anim_screen_transition {

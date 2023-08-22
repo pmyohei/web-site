@@ -43,7 +43,6 @@ $(function () {
                 //--------------------
                 if( $(this).hasClass('is-active') ){
                     // 発火済みは対象外のため、continue
-                    console.log("continue");
                     return true;
                 }
 
