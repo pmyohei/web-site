@@ -19,7 +19,6 @@
 }
 
 .inner .page-header-image {
-	/* --overflow: 120px; */
 	height: calc(100% + (2 * var(--overflow)));
 	top: calc( -1 * var(--overflow));
 	width: 100%;

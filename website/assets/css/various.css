@@ -471,8 +471,6 @@
 }
 
 
-
-
 /* =================================
     採用共通
    ================================= */
@@ -494,7 +492,6 @@
 
 .job_section_title {
   color: #3261AB;
-  /* line-height: 1.4em; */
   letter-spacing: .1em;
   font-size: 28px;
   margin-bottom: 20px;
@@ -505,7 +502,6 @@
   font-family: "Sawarabi Gothic";
   line-height: 2.4em;
   font-size: 14px;
-  /* letter-spacing: .1em; */
 }
 
 .process_contents_wrapper {
@@ -554,7 +550,6 @@
   line-height: 2.0em;
   font-size: 14px;
   font-family: "Sawarabi Gothic";
-  /* letter-spacing: .1em; */
 }
 
 .external_link_wrapper {
@@ -583,9 +578,7 @@
   .process_detail_wrapper p {
     line-height: 1.6em;
     font-size: 14px;
-    /* letter-spacing: .1em; */
   }
-  
 }
 
 
@@ -610,7 +603,6 @@
   font-family: "Sawarabi Gothic";
   line-height: 1.6em;
   font-size: 16px;
-  /* letter-spacing: .1em; */
 }
 
 .job_detail_area {
@@ -620,7 +612,6 @@
   font-family: "Sawarabi Gothic";
   font-size: 15px;
   line-height: 1.8em;
-  /* letter-spacing: .1em; */
   color: #3d3d3d;
 }
 
@@ -652,7 +643,6 @@
 
 .benefit_title {
   font-size: 16px;
-  /* letter-spacing: .1em; */
 }
 
 .benefit_contents {
@@ -821,7 +811,6 @@
   font-family: "Sawarabi Gothic";
   line-height: 2.4em;
   font-size: 14px;
-  /* letter-spacing: .1em; */
 }
 
 .want_contents {
@@ -837,7 +826,6 @@
   line-height: 1.6em;
   font-size: 14px;
   font-family: "Sawarabi Gothic";
-  /* letter-spacing: .1em; */
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -866,18 +854,9 @@
   width: 100%;
   display: block;
 }
-/* ★ */
-/* .question_line span {
-  display: block;
-  left: 0;
-  margin-left: 20px;
-  text-transform: none;
-  letter-spacing: .1em;
-  font-size: 14px;
-} */
+
 .question_line p {
   line-height: 1.6em;
-  /* letter-spacing: .1em; */
   font-size: 14px;
 }
 
@@ -930,7 +909,6 @@
   color: #363636;
   font-family: "Sawarabi Gothic";
   line-height: 1.8em;
-  /* letter-spacing: .1em; */
   font-size: 14px;
 }
 
@@ -988,7 +966,6 @@
   
   .want_contents p {
     font-size: 14px;
-    /* letter-spacing: .1em; */
     margin-bottom: 20px;
     margin-top: 20px;
   }
@@ -1047,7 +1024,6 @@
 }
 
 
-
 /* =================================
     キャリア採用
    ================================= */
@@ -1082,14 +1058,11 @@
   }
 }
 
-
-
 /* =================================
   部活動画面
  ================================= */
 .section_club_gallery {
   background-color: #EEEEEE;
-  /* padding: 80px 0; */
 }
 
 .club_item {
@@ -1106,7 +1079,6 @@
   justify-content: center;
   margin-top: 40px;
 }
-
 
 @media screen and (max-width: 991px){
 
@@ -1170,7 +1142,6 @@
   .activity_item_detail_block .item_detail_text {
     padding-top: 0px;
   }
-  
 }
 
 
@@ -1225,7 +1196,6 @@
 .privacy_wrapper table thead th {
   padding: 0  0.75rem;
 }
-
 
 @media screen and (max-width: 991px){
 
@@ -1299,7 +1269,6 @@
   font-family: "Sawarabi Gothic";
   font-size: 14px;
   line-height: 2.0em;
-  /* letter-spacing: .1em; */
   padding-bottom: 6px;
 }
 
@@ -1344,7 +1313,6 @@
   font-family: "Sawarabi Gothic";
   font-size: 15px;
   line-height: 2.0em;
-  /* letter-spacing: .1em; */
   margin-top: 16px;
 }
 
@@ -1384,17 +1352,10 @@
 .anniversary-header .anniversary-header-image {
   position: absolute;
   background-size: cover;
-  /* background-size: contain; */
   background-position: center center;
   width: 100%;
   height: 100%;
 }
-
-.anniversary-head_wrapper {
-  /* margin-top: 25vh;
-  margin-bottom: 10vh; */
-}
-
 
 .anniversary-sub {
   color: #252525;
@@ -1402,33 +1363,10 @@
   font-weight: 500;
 }
 
-/* .anniversary-sub-bg {
-  position: relative;
-  background: linear-gradient(0deg, #ffffff, #D7D4C6);
-}
-
-.anniversary-sub-bg.-visible:before {
-  transform: translate(0, 0);
-}
-
-.anniversary-sub-bg:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translate(0, 100%);
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .6s;
-  content: '';
-
-  background-color: #ffffff;
-} */
-
 .anniversary_message {
   color: #354C6E;
   font-family: "Sawarabi Gothic";
   font-size: 24px;
-  /* line-height: 1.4em; */
   letter-spacing: .1em;
 }
 
@@ -1437,10 +1375,7 @@
   font-family: "Sawarabi Gothic";
   line-height: 2.4em;
   font-size: 1.0em;
-  /* letter-spacing: .1em; */
 }
-
-
 
 @media screen and (max-width: 991px){
 
@@ -1452,12 +1387,5 @@
     font-size: 14px;
     line-height: 2.0em;
     letter-spacing: .08em;
-  }
-
-  .anniversary-header .anniversary-header-image {
-    /* background-size: cover;
-    background-position: top center;
-    width: 100%; */
-    /* height: auto; */
   }
 }
