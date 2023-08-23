@@ -278,9 +278,6 @@
 .ceo_name.top {
   margin-top: 32px;
 }
-.ceo_name.end {
-  margin-top: 32px;
-}
 
 .ceo_text {
   font-family: "Klee One";
@@ -369,11 +366,7 @@
   .ceo_name {
     font-size: 12px;
   }
-  .ceo_name.end {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
+  
   .ceo_text {
     font-size: 13px;
     line-height: 2.0em;
