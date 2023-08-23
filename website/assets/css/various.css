@@ -343,7 +343,7 @@
 
   .ceo_top_message_wrapper {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 12px;
   }
   .ceo_text_center_wrapper.high-space {
     padding-top: 60px;
@@ -586,17 +586,32 @@
     採用Top
    ================================= */
 
-.section_job_top {
+.section_job_top:nth-child(2) {
   background-color: #FFF8F8;
   padding-top: 8em;
-  padding-bottom: 4em;
+  padding-bottom: 6em;
+}
+.section_job_top:nth-child(3) {
+  background-color: #FFFFFF;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+.section_job_top:nth-child(3) .row {
+  flex-direction: row-reverse;
 }
 
-
-.img_job_top {
+.img_job_top,
+.img_job_top_rise {
     background-position: center center;
     background-size: contain;
-    padding: 20px;
+    padding: 8px 0px 0px 0px;
+}
+
+.section_job_top:nth-child(2) .job_message_wrapper {
+  padding-left: calc( 100% * 0.14 );
+}
+.section_job_top:nth-child(3) .job_message_wrapper {
+  padding-left: 0px;
 }
 
 .job_section_message {
@@ -654,6 +669,11 @@
 
 @media screen and (max-width: 991px){
 
+  .section_job_top {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .job_section_title {
     font-size: 22px;
   }
@@ -662,7 +682,7 @@
     font-size: 12px;
   }
 
-  .img_job_top {
+  .img_job_top_rise {
     padding-top: 12px;
     padding-left: 32px;
     padding-right: 0px;
@@ -727,9 +747,22 @@
     background-position: left 40% bottom 50%;
   }
 
-  .img_job_top {
+  .section_job_top:nth-child(3) .job_message_wrapper {
+    padding-left: calc( 100% * 0.14 );
+  }
+
+  .img_job_top,
+  .img_job_top_rise {
     margin-top: 32px;
     padding: 20px;
+  }
+}
+
+@media screen and (max-width: 543px){
+
+  .section_job_top:nth-child(2) .job_message_wrapper,
+  .section_job_top:nth-child(3) .job_message_wrapper {
+    padding-left: 12px;
   }
 }
 
