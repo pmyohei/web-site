@@ -1080,6 +1080,12 @@
   margin-top: 40px;
 }
 
+@media screen and (min-width: 992px){
+  .item_detail_text.club {
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 991px){
 
   .club_item {
