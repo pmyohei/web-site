@@ -366,7 +366,7 @@
   .ceo_name {
     font-size: 12px;
   }
-  
+
   .ceo_text {
     font-size: 13px;
     line-height: 2.0em;
@@ -1221,6 +1221,16 @@
 }
 .privacy_wrapper li.m_txt-indent {
   padding-left: calc(16px + 0.8em);
+}
+.privacy_wrapper ol .m_inner-indent {
+  padding-left: calc((16px + 0.8em) + 20px);
+}
+.privacy_wrapper ol .m_inner-indent_m {
+  margin-left: calc((16px + 0.8em) + 20px);
+  margin-right: 20px;
+}
+.privacy_wrapper ol table.m_inner-indent_m {
+  width: calc( 100% - ((16px + 0.8em) + 20px));
 }
 .privacy_wrapper li p {
   margin-top: 8px;
