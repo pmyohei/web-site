@@ -204,14 +204,12 @@
 /* =====================================================
     画像フロート（下からふわっと表示される） アニメーション
    ======================================================*/
-.u-fade-anniversary-picture {
+.u-fade-float-picture {
     transform: translateY(60px);
     opacity: 0;
 }
-.u-fade-anniversary-picture.is-active {
+.u-fade-float-picture.is-active {
     transition: opacity 1.0s ease-out, transform 1.0s ease-out;
-    /* transition: 1.0s ease-out; */
     transform: translateY(0);
-    /* transition-delay: 0.6s; */
     opacity: 1;
 }
