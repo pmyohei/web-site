@@ -308,7 +308,7 @@ $(function(){
  * サブメニュークリック表示制御：スマホサイズ版
  */
 $(function(){
-  $(".submenu-hover-item").click( function(){
+  $(".submenu-click-item").click( function(){
 
     //------------------------------
     // ブラウザサイズ判定
@@ -317,23 +317,26 @@ $(function(){
     if ($(window).width() >= 992) {
       return;
     }
-    
+
+    // 大項目全体
+    var subMenuParent = $(this).closest('.submenu-hover-item');
+
     //------------------------------
     // サブメニュー開き中
     //------------------------------
     // 既に開いていれば、閉じて終了
-    var clickedSubMenu = $(this).find('.subMenu_side');
+    var clickedSubMenu = subMenuParent.find('.subMenu_side');
     if( clickedSubMenu.hasClass('active') ){
       clickedSubMenu.removeClass('active')
       return;
     }
 
     //------------------------------
-    // 開いているサブメニューをクローズ
+    // 開いているサブメニューをClose
     //------------------------------
     // メニューを全て取得
-    var subMenuList = $(this).parent().children(".submenu-hover-item");
-    
+    var subMenuList = subMenuParent.closest('.nav_root').children(".submenu-hover-item");
+
     // 開いているサブメニューを探す
     subMenuList.each (function() {
 
@@ -348,6 +351,9 @@ $(function(){
       }
     });
 
+    //------------------------------
+    // サブメニューOpen
+    //------------------------------
     // クリックされたメニューのサブメニュー数
     var subMenuNum = clickedSubMenu.children().length;
 
@@ -355,8 +361,7 @@ $(function(){
     clickedSubMenu.addClass("active");
 
     // サブメニュー数に応じた高さを設定
-    // !「children().length」の値は、『「実際の小項目数」＋１』
-    if( subMenuNum == 5 ){
+    if( subMenuNum == 4 ){
       clickedSubMenu.addClass("company");  
     } else {
       clickedSubMenu.addClass("recruit");  
