@@ -1369,9 +1369,15 @@
   
   .contact_item {
     margin-left: 5%;
+    margin-left: auto;
   }
 }
 
+@media screen and (max-width: 543px){
+  .contact_contents {
+    margin-top: 8px;
+  }
+}
 
 /* =================================
     マージン率画面
