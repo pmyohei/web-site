@@ -404,7 +404,7 @@ footer.footer_item a{
     }
 }
 
-/* 
+/*
     セクション：信念関連のセクション
 */
 .section_belief_message {
@@ -422,7 +422,7 @@ footer.footer_item a{
 @media screen and (max-width: 991px){
 
     .section_belief_message {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .section_belief_sub_message {
