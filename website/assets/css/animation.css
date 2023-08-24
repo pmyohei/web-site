@@ -85,7 +85,7 @@
 .image-unit-chg-2s {
     width: 100%;
     opacity: 0;
-    animation: change-img-unit-anim 2s forwards;
+    animation: change-img-unit-anim 5s forwards;
 }
 
 @keyframes change-img-unit-anim {

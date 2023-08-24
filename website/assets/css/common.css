@@ -496,25 +496,9 @@ footer.footer_item a{
   left: 0;
   top: 0;
   content: "";
-  
-  /* hover 発生時 */
-  cursor: pointer;
-  transition: transform 0.8s cubic-bezier(.38,.98,.7,1);
-  
-  transform-origin: left top;
-  transform: scale(1, 1);
 }
 
-.link-img-wrapper:hover:before {
-  transform-origin: right top;
-  transform: scale(0, 1);
-}
-
-.link-img-wrapper:hover .container {
-  color: rgba(255, 255, 255, 1.0);
-}
-
-.link-img-wrapper .recruit-img {
+.link-img-wrapper .link-img {
   position: absolute;
   background-size: cover;
   background-position: center center;
@@ -558,7 +542,23 @@ footer.footer_item a{
     }
 }
   
-
+@media screen and (min-width: 768px){
+    .link-img-wrapper:before {
+        /* hover 発生時 */
+        cursor: pointer;
+        transition: transform 0.8s cubic-bezier(.38,.98,.7,1);
+        
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+      .link-img-wrapper:hover:before {
+        transform-origin: right top;
+        transform: scale(0, 1);
+      }
+      .link-img-wrapper:hover .container {
+        color: rgba(255, 255, 255, 1.0);
+      }
+}
 
 
 /* =================================
