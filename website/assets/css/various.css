@@ -601,10 +601,10 @@
 }
 
 .section_job_top:nth-child(2) .job_message_wrapper {
-  padding-left: calc( 100% * 0.14 );
+  margin-left: calc( (100% * 0.1) * -1 );
 }
 .section_job_top:nth-child(3) .job_message_wrapper {
-  padding-left: 0px;
+  padding-left: 60px;
 }
 
 .job_section_message {
@@ -618,7 +618,7 @@
 }
 .job_detail_area p {
   font-family: "Sawarabi Gothic";
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8em;
   color: #3d3d3d;
 }
@@ -660,11 +660,25 @@
   letter-spacing: .2em;
 }
 
+
+@media screen and (max-width: 1299px){
+  .section_job_top:nth-child(2) .job_message_wrapper {
+    margin-left: calc( (100% * 0.2) * -1 );
+  }
+}
+@media screen and (max-width: 1199px){
+  .section_job_top:nth-child(2) .job_message_wrapper {
+    margin-left: 0px;
+  }
+}
 @media screen and (max-width: 991px){
 
   .section_job_top {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .section_job_top:nth-child(2) .job_message_wrapper {
+    margin-left: calc( (100% * 0.1) * -1 );
   }
 
   .job_section_title {
@@ -740,8 +754,21 @@
     background-position: left 40% bottom 50%;
   }
 
+  .section_job_top:nth-child(2) .job_message_wrapper {
+    margin-right: auto;
+    margin-left: auto;
+  }
   .section_job_top:nth-child(3) .job_message_wrapper {
-    padding-left: calc( 100% * 0.14 );
+    padding-left: 0px;
+  }
+
+  .container-sm-top {
+    max-width: 540px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .img_job_top,
@@ -755,7 +782,12 @@
 
   .section_job_top:nth-child(2) .job_message_wrapper,
   .section_job_top:nth-child(3) .job_message_wrapper {
-    padding-left: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .benefit_item {
+    height: 380px;
   }
 }
 
