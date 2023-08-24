@@ -185,9 +185,10 @@ p {
 
     .header_main_title.kg {
         font-size: 32px;
+        margin-bottom: 16px;
     }
     .header_sub_title.home {
-        font-size: 12px;
+        font-size: 13px;
     }
     .header_message {
         font-size: 16px;
