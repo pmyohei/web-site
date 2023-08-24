@@ -1424,7 +1424,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   color: #FFFFFF;
 }
 
-.btn:hover,
+/* .btn:hover, */
 .btn:focus,
 .btn:not(:disabled):not(.disabled):active,
 .btn:not(:disabled):not(.disabled).active,
@@ -1451,10 +1451,25 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   box-shadow: none;
 }
 
-.btn:hover,
+/* .btn:hover, */
 .navbar .navbar-nav>a.btn:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
 }
+
+/* =================================== */
+/* btn hover ブラウザ限定対応 */
+@media screen and (min-width: 768px) {
+  .btn:hover {
+    background-color: #979797;
+    color: #FFFFFF;
+    box-shadow: none;
+  }
+
+  .btn:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  }
+}
+/* =================================== */
 
 .btn.disabled,
 .btn.disabled:hover,
