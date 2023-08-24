@@ -267,12 +267,20 @@
       Smooth Scrolling初期化
     */
     const initSmoothScroll = () => {
-        // Remove the loader
-        document.body.classList.remove('loading');
+        
+        //---------------------------
+        // スマホ／タブレット無効化判定
+        //---------------------------
+        if (window.matchMedia && window.matchMedia('(max-device-width: 767px)').matches) {
+            // SmoothScrollなし
+            return;
+        }
 
+        //---------------------------
+        // SmoothScroll 初期処理
+        //---------------------------
         // スクロール位置を取得
         getPageYScroll();
-        // console.log("docScroll=", docScroll );
 
         // Smooth Scrollingを初期化
         new SmoothScroll();
