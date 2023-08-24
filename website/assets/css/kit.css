@@ -4504,6 +4504,8 @@ Created using IcoMoon - icomoon.io
   vertical-align: middle;
 }
 
+.navbar i,
+.navbar p,
 .navbar a:not(.btn):not(.dropdown-item) {
   color: #FFFFFF;
 }
