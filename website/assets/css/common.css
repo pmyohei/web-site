@@ -383,7 +383,7 @@ footer.footer_item a{
     }
 
     .section_title_message {
-        font-size: 18px;
+        font-size: 22px;
     }
     .section_sub_title_message {
         font-size: 14px;
@@ -393,6 +393,16 @@ footer.footer_item a{
     }
 }
 
+@media screen and (max-width: 767px){
+
+    .section_context_header:nth-child(2) {
+        padding-bottom: 32px;
+    }
+    .section_context_header:nth-child(n + 3) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
 
 /* 
     セクション：信念関連のセクション
@@ -455,7 +465,7 @@ footer.footer_item a{
     }
 
     .section_item_title.middle {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
