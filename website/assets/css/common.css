@@ -460,6 +460,10 @@ footer.footer_item a{
 }
 
 @media screen and (max-width: 991px){
+    .section_item_title.large {
+        font-size: 28px;
+    }
+
     .section_item_title {
       font-size: 22px;
     }
@@ -477,8 +481,10 @@ footer.footer_item a{
 .view_more {
     background-color: #ffffff;
     color: #393e46;
-    border: 1px solid rgba(161, 167, 177, 0.8);
+    border: 1px solid rgba(161, 167, 177, 0.9);
     width: 200px;
+    box-shadow: 0px 0px 15px -10px #777777;
+    letter-spacing: 0.1em;
 }
 
 .view_more.dark {
@@ -548,8 +554,8 @@ footer.footer_item a{
 
 @media screen and (max-width: 991px){
     .view_more {
-        width: 120px;
-        font-size: 12px;
+        /* width: 200px; */
+        font-size: 14px;
     }
 }
   

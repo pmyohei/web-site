@@ -98,6 +98,14 @@
   .home_item:nth-child(even) .home_item_img {
     padding: 20px;
   }
+
+  @media screen and (max-width: 991px){
+
+    .information_line.news {
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+}
 }
 
 
