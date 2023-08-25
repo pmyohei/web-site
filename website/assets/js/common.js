@@ -103,7 +103,7 @@ $(function () {
             $scroll.each( function () {
                 
                 scroll_volume = $scroll.attr('scroll-volume');
-                console.log( scroll_volume );
+                // console.log( scroll_volume );
                 // console.log( "test" );
 
                 // 要素のY位置
@@ -128,8 +128,29 @@ $(function () {
 });
 
 
+    /*
+      Smooth Scrolling初期化
+    */
+      const initSmoothScroll = () => {
+        
+        console.log("aaa");
+
+        if ($('.fix_test').length) {
+            console.log("fix_test=" , $('.fix_test').height() );
+            // console.log("fix_test::before=" , $('.fix_test::before').height() );
+
+            // $('.fix_test::before').attr('height', '' + $('.fix_test').height() + '')
+
+            // $('.fix_test').before("aaa");
+        }
 
 
+    };
+
+    // ページ読み込みが完了したとき、Smooth Scrollingを初期化する
+    // ！こうしないと、id指定にてページ内の任意の個所にジャンプしたとき、
+    //   ジャンプ先がページ最上部として計算される
+    window.addEventListener('load', initSmoothScroll);
 
 
 
