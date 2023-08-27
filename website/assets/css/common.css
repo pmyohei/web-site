@@ -685,13 +685,20 @@ footer.footer_item a{
 .br_under_sm {
     display: none;
 }
+.br_under_xs {
+    display: none;
+}
 .br_under_xs_half {
     display: none;
 }
+
 .br_over_md {
     display: none;
 }
 .br_over_sm {
+    display: none;
+}
+.br_over_xm {
     display: none;
 }
 .br_over_md_under_lg {
@@ -710,6 +717,12 @@ footer.footer_item a{
         display: block;
     }
 }
+/* ～543px：改行有効 */
+@media screen and (max-width: 543px) {
+    .br_under_xs {
+        display: block;
+    }
+}
 /* ～360px：改行有効 */
 @media screen and (max-width: 370px) {
     .br_under_xs_half {
@@ -717,6 +730,12 @@ footer.footer_item a{
     }
 }
 
+/* 544px～：改行有効 */
+@media screen and (min-width: 544px) {
+    .br_over_xm {
+        display: block;
+    }
+}
 /* 768px～：改行有効 */
 @media screen and (min-width: 768px) {
     .br_over_sm {

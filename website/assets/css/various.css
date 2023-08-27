@@ -1499,14 +1499,16 @@ p.details {
 .anniversary_sub_message {
   color: #354C6E;
   font-family: "Sawarabi Gothic";
-  line-height: 2.4em;
-  font-size: 1.0em;
+  line-height: 1.8em;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 991px){
 
   .anniversary_message {
-    font-size: 16px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 12px;
   }
 
   .anniversary_sub_message {
