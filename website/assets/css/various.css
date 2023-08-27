@@ -435,11 +435,26 @@
   padding-left: 48px;
 }
 
-.service_item_detail_block {
+p.details {
+  color: #5171a8;
+  font-weight: 600;
+  font-size: 22px;
   margin-top: 40px;
+  margin-bottom: 0px;
+}
+.service_item_detail_block {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 20px;
+  border-left: 2px solid #5171a88c;
 }
 
 @media screen and (max-width: 991px){
+
+  .section_belief_message.service {
+    font-size: 26px;
+    line-height: 1.2em;
+  }
 
   .service_header_detail {
     font-size: 14px;
@@ -466,6 +481,10 @@
     margin-right: 16px;
   }
 
+  p.details {
+    font-size: 20px;
+    margin-top: 16px;
+  }
   .service_item_detail_block {
     margin-top: 12px;
   }
