@@ -70,7 +70,7 @@ $(function () {
                 let triggerLine;
                 if( kind == SCROLL_TRIGGER_MIDDLE ){
                     // 対象が大体画面中央までスクロールされた時
-                    triggerLine = triggerPos - (windowHeight / 1.4);
+                    triggerLine = triggerPos - (windowHeight * 0.8);
                 } else {
                     // 対象が画面下部にきたとき
                     triggerLine = triggerPos - windowHeight;
