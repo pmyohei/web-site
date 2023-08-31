@@ -204,7 +204,7 @@
 
 .philosophy-text-container {
   padding-left: 60px;
-  color: #111111;
+  color: #414141;
 }
 
 .philosophy-item {
@@ -450,11 +450,6 @@ p.details {
 }
 
 @media screen and (max-width: 991px){
-
-  .section_belief_message.service {
-    font-size: 26px;
-    line-height: 1.2em;
-  }
 
   .service_header_detail {
     font-size: 14px;

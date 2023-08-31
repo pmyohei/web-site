@@ -40,7 +40,7 @@
     //   画像のパララックス
     //-----------------------
     class Item {
-        constructor(el) {
+        constructor(el, easeValue) {
             // the .item element
             this.DOM = {el: el};
             // the inner image
@@ -61,7 +61,7 @@
                     // current value
                     current: 0,
                     // amount to interpolate
-                    ease: 0.1,
+                    ease: easeValue,
                     // 画像を変換する最大値は CSS変数 (--overflow) に設定される
                     maxValue: parseInt( getComputedStyle(this.DOM.image).getPropertyValue('--overflow'), 10 ),
                     // 現在地の設定。Translationの値は次のようになります。
@@ -156,8 +156,7 @@
             this.DOM.scrollable = this.DOM.main.querySelector('div[data-scroll]');
             // the items on the page
             this.items = [];
-            // [...this.DOM.main.querySelectorAll('.content > .item')].forEach( item => this.items.push(new Item(item)) );
-            [...this.DOM.main.querySelectorAll('.page-header')].forEach( item => this.items.push(new Item(item)) );
+            [...this.DOM.main.querySelectorAll('.page-header')].forEach( item => this.items.push(new Item(item, 0.1)) );
             
             // ここでは、ページをスクロールするときにどのプロパティが変更されるかを定義します。
             // この場合、y軸上で平行移動します。
@@ -219,11 +218,11 @@
             // 現在の値と補間された値を更新
             for (const key in this.renderedStyles ) {
                 this.renderedStyles[key].current = this.renderedStyles[key].setValue();
-                this.renderedStyles[key].previous = MathUtils.lerp(this.renderedStyles[key].previous, this.renderedStyles[key].current, this.renderedStyles[key].ease);
+                this.renderedStyles[key].previous = MathUtils.lerp(this.renderedStyles[key].previous, this.renderedStyles[key].current, this.renderedStyles[key].ease);        
             }
             // スクロール可能要素をtranslate
             this.layout();
-            
+
             // for every item
             for (const item of this.items) {
                 // 項目がビューポート内にある場合は、そのレンダリング関数を呼び出します
@@ -241,26 +240,36 @@
     /***********************************/
     /********** Preload stuff **********/
 
-    // Preload images
-    // const preloadImages = () => {
-    //     // 非同期処理
-    //     return new Promise((resolve, reject) => {
-    //         // パララックス対象の読み込みが全て完了したとき
-    //         // imagesLoaded(document.querySelectorAll('.item__img'), {background: true}, resolve);
-    //         imagesLoaded(document.querySelectorAll('.page-header-image'), {background: true}, resolve);
-    //     });
-    // };
-    
-    // And then..
-    // preloadImages().then(() => {
-    //     // Remove the loader
-    //     document.body.classList.remove('loading');
-    //     // スクロール位置を取得
-    //     getPageYScroll();
-    //     console.log("docScroll=", docScroll );
-    //     // Smooth Scrollingを初期化
-    //     new SmoothScroll();
-    // });
+    //----------------------------
+    // ImageParallaxControlクラス
+    //   画像のみのパララックスを行う
+    //----------------------------
+    class ImageParallaxControl {
+        constructor() {
+            // the <main> element
+            this.DOM = {main: document.querySelector('main')};
+            // the items on the page
+            this.items = [];
+            [...this.DOM.main.querySelectorAll('.page-header')].forEach( item => this.items.push(new Item(item, 0.5)) );
+            
+            // start the render loop
+            requestAnimationFrame(() => this.render());
+        }
+        render() {
+
+            // for every item
+            for (const item of this.items) {
+                // 項目がビューポート内にある場合は、そのレンダリング関数を呼び出します
+                // これにより、ドキュメントのスクロール値とビューポート上のアイテムの位置に基づいて、アイテムの内部画像の変換が更新されます。
+                if ( item.isVisible ) {
+                    item.render();
+                }
+            }
+            
+            // loop..
+            requestAnimationFrame(() => this.render());
+        }
+    }
 
 
     /*
@@ -268,22 +277,22 @@
     */
     const initSmoothScroll = () => {
         
-        //---------------------------
-        // スマホ／タブレット無効化判定
-        //---------------------------
-        if (window.matchMedia && window.matchMedia('(max-device-width: 767px)').matches) {
-            // SmoothScrollなし
-            return;
-        }
-
-        //---------------------------
-        // SmoothScroll 初期処理
-        //---------------------------
         // スクロール位置を取得
         getPageYScroll();
 
-        // Smooth Scrollingを初期化
-        new SmoothScroll();
+        //---------------------------------------
+        // スマホ・タブレット ／ ブラウザ 切り分け
+        //---------------------------------------
+        if (window.matchMedia && window.matchMedia('(max-device-width: 767px)').matches) {
+            // SmoothScrollなし
+            // 画像のパララックス制御のみ行う
+            new ImageParallaxControl();
+
+        } else {
+            // Smooth Scrollingを初期化
+            // SmoothScrollと画像パララックス同時処理
+            new SmoothScroll();
+        }
     };
 
     // ページ読み込みが完了したとき、Smooth Scrollingを初期化する

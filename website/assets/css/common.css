@@ -422,7 +422,8 @@ footer.footer_item a{
 @media screen and (max-width: 991px){
 
     .section_belief_message {
-        font-size: 20px;
+        font-size: 26px;
+        line-height: 1.2em;
     }
 
     .section_belief_sub_message {

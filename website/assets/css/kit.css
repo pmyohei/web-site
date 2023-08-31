@@ -6548,7 +6548,7 @@ img {
     position: fixed;
     display: block !important;
     top: 0;
-    height: 100% !important;
+    height: 100vh  !important;
     width: 300px;
     right: 0;
     z-index: 1032;
