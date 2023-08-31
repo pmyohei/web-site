@@ -165,7 +165,8 @@
 }
 /* トリガー発火でis-activeを付与 */
 .u-fade-type-trance-2.is-active {
-  transition: opacity 2.0s;
+  /* transition: opacity 2.0s; */
+  transition: opacity 1.0s;
   opacity: 1;
 }
 
